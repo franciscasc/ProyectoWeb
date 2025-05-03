@@ -27,11 +27,8 @@ export class HeaderComponent  implements OnInit {
   /*goToHome() {
     this.router.navigate(['/home']);
   }*/
-  gotoLogin() {
-    this.router.navigate(['/log-in']);
-  }
-  gotoSignUp() {
-    this.router.navigate(['/sign-up']);
+  goTouser() {
+    this.router.navigate(['/pre-start']);
   }
 
   goToNotifications() {
