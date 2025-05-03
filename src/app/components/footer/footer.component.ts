@@ -17,14 +17,21 @@ export class FooterComponent  implements OnInit {
       console.log("se creo el pie de pagina de manera exitosa")
     }
 
-  goToHome() {
-    this.router.navigate(['/home']);
+  goTouser() {
+    this.router.navigate(['/pre-start']);
   }
-  gotoLogin() {
-    this.router.navigate(['/log-in']);
+
+  goToNotifications() {
+    this.router.navigate(['/notifications']);
   }
-  gotoSignUp() {
-    this.router.navigate(['/sign-up']);
+
+  goToCalendar() {
+    this.router.navigate(['/calendar']);
   }
+
+  goToRoutes() {
+    this.router.navigate(['/routes-navigations']);
+  }
+ 
 
 }

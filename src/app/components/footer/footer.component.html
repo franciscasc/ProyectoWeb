@@ -10,19 +10,22 @@
 
 <ion-tabs [ngClass]="{ 'hidden': screenWidth > 768 }">
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home" (click)="goToHome()">
-      <ion-icon name="home-outline"></ion-icon>
-      <ion-label>Inicio</ion-label>
+    
+
+    <ion-tab-button tab="rutes" (click)="goToRoutes()">
+      <ion-icon name="location-outline"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="products" (click)="gotoLogin()">
-      <ion-icon name="log-in-outline"></ion-icon>
-      <ion-label>Log in</ion-label>
+    <ion-tab-button tab="notifications" (click)="goToNotifications()">
+      <ion-icon name="notifications-outline"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="sign-up" (click)="gotoSignUp()">
+    <ion-tab-button tab="user" (click)="goTouser()">
       <ion-icon name="person-circle-outline"></ion-icon>
-      <ion-label>Sign up</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="calendar" (click)="goToCalendar()" >
+      <ion-icon name="calendar-outline"></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

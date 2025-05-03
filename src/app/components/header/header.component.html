@@ -6,11 +6,12 @@
 
     
     <ion-buttons slot="end">
-      <ion-button (click)="goToHome()">
-        <ion-icon slot="start" name="home-outline"></ion-icon>
-        Inicio
-      </ion-button>
-
+      <!--
+        <ion-button (click)="goToHome()">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          Inicio
+        </ion-button>
+        -->
       <ion-button (click)="gotoLogin()">
         <ion-icon slot="start" name="log-in-outline"></ion-icon>
         Log in
@@ -19,6 +20,21 @@
       <ion-button (click)="gotoSignUp()">
         <ion-icon slot="start" name="person-add-outline"></ion-icon>
         Sign up
+      </ion-button>
+
+      <ion-button (click)="gotoSignUp()">
+        <ion-icon name="location-outline"></ion-icon>
+        Rutas
+      </ion-button>
+
+      <ion-button (click)="gotoSignUp()">
+        <ion-icon name="notifications-outline"></ion-icon>
+        Notificaciones
+      </ion-button>
+
+      <ion-button (click)="gotoSignUp()">
+        <ion-icon name="calendar-outline"></ion-icon>
+        Calendario
       </ion-button>
       
     </ion-buttons>

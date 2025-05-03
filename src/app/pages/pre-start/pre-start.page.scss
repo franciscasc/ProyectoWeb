@@ -1,0 +1,9 @@
+.begin-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 16px; // espacio entre botones
+    padding: 0 20px;
+  }

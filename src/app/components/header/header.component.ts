@@ -24,14 +24,26 @@ export class HeaderComponent  implements OnInit {
     this.screenWidth = event.target.innerWidth;
   }
 
-  goToHome() {
+  /*goToHome() {
     this.router.navigate(['/home']);
-  }
+  }*/
   gotoLogin() {
     this.router.navigate(['/log-in']);
   }
   gotoSignUp() {
     this.router.navigate(['/sign-up']);
+  }
+
+  goToNotifications() {
+    this.router.navigate(['/notifications']);
+  }
+
+  goToCalendar() {
+    this.router.navigate(['/calendar']);
+  }
+
+  goToRoutes() {
+    this.router.navigate(['/routes-navigations']);
   }
 
 }
