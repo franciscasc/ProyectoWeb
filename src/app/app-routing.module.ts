@@ -18,7 +18,23 @@ const routes: Routes = [
   {
     path: 'sign-up',
     loadChildren: () => import('./pages/sign-up/sign-up.module').then( m => m.SignUpPageModule)
+  },  {
+    path: 'pre-start',
+    loadChildren: () => import('./pages/pre-start/pre-start.module').then( m => m.PreStartPageModule)
   },
+  {
+    path: 'notifications',
+    loadChildren: () => import('./pages/notifications/notifications.module').then( m => m.NotificationsPageModule)
+  },
+  {
+    path: 'calendar',
+    loadChildren: () => import('./pages/calendar/calendar.module').then( m => m.CalendarPageModule)
+  },
+  {
+    path: 'routes-navigations',
+    loadChildren: () => import('./pages/routes-navigations/routes-navigations.module').then( m => m.RoutesNavigationsPageModule)
+  },
+
 ];
 
 @NgModule({
