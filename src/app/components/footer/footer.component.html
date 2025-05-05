@@ -1,0 +1,31 @@
+<!-- Vista para pc-->
+<div [ngClass]="{ 'hidden': screenWidth <= 768 }">
+  <ion-footer>
+    <ion-title>aca va el footer</ion-title>
+  </ion-footer>  
+</div>
+
+
+<!-- vista para celulares-->
+
+<ion-tabs [ngClass]="{ 'hidden': screenWidth > 768 }">
+  <ion-tab-bar slot="bottom" color="secondary">
+    
+    <ion-tab-button tab="rutes" (click)="goToRoutes()">
+      <ion-icon name="location-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="notifications" (click)="goToNotifications()">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="user" (click)="goTouser()">
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="calendar" (click)="goToCalendar()" >
+      <ion-icon name="calendar-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+
