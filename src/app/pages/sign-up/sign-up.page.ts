@@ -16,5 +16,8 @@ export class SignUpPage implements OnInit {
   goBack() {
     this.router.navigate(['/log-in']);
   }
+  goToRutas() {
+    this.router.navigate(['/routes-navigations']);
+  }
 
 }
