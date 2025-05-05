@@ -14,8 +14,5 @@ export class LogInPage implements OnInit {
   ngOnInit() {
   }
 
-  goBack() {
-    this.router.navigate(['/pre-start']);
-  }//patata
 
 }
