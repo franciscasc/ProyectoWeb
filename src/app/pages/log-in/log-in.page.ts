@@ -16,6 +16,6 @@ export class LogInPage implements OnInit {
 
   goBack() {
     this.router.navigate(['/pre-start']);
-  }
+  }//patata
 
 }
