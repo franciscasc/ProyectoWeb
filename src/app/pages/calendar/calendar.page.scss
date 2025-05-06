@@ -1,0 +1,39 @@
+//version pc
+.nose {
+    display: flex;
+    flex-direction: row;  /* Cambiar la dirección a columna para que los elementos estén apilados */
+    justify-content: space-evenly;  /* Centrar los elementos en el eje Y */
+    align-items: center;  /* Centrar los elementos en el eje X */
+    height: 100vh;  /* Asegurarse de que ocupe toda la altura disponible */
+    padding: 10px;
+}
+.calendario{
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendario ion-datetime {
+    
+    --background:var(--ion-color-secondary);
+    --background-rgb: var(--ion-color-secondary-shade);
+
+    border-radius: 16px;
+    box-shadow: rgba(var(--ion-color-rose-rgb), 0.3) 0px 10px 15px -3px;
+
+}
+
+
+
+.listaEventos {
+    display: flex;
+    flex-direction: column; /* Esto hace que los cards se apilen verticalmente */
+    justify-content: center;
+    align-items: center; /* Centra los cards horizontalmente */
+   
+}
+
+.listaEventos ion-card {
+    box-shadow: none;
+}
+
