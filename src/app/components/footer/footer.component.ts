@@ -17,9 +17,6 @@ export class FooterComponent  implements OnInit {
       console.log("se creo el pie de pagina de manera exitosa")
     }
 
-  goTouser() {
-    this.router.navigate(['/pre-start']);
-  }
 
   goToNotifications() {
     this.router.navigate(['/notifications']);

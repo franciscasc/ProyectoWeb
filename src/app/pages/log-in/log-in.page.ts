@@ -14,8 +14,12 @@ export class LogInPage implements OnInit {
   ngOnInit() {
   }
 
-  goBack() {
-    this.router.navigate(['/pre-start']);
+  goToSignUp() {
+    this.router.navigate(['/sign-up']);
   }
+  goToRutas() {
+    this.router.navigate(['/routes-navigations']);
+  }
+
 
 }

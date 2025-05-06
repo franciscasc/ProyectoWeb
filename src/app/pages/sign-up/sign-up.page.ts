@@ -14,7 +14,10 @@ export class SignUpPage implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/pre-start']);
+    this.router.navigate(['/log-in']);
+  }
+  goToRutas() {
+    this.router.navigate(['/routes-navigations']);
   }
 
 }
