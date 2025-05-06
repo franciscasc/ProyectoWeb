@@ -1,0 +1,76 @@
+
+.perfil-usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    ion-card {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .perfil-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: auto;
+        
+        ion-avatar {
+            background-color: #ffffff;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 16px;
+        }
+        
+
+        .usuario {
+            color: "medium-tint";
+            font-size: 12px;
+        }
+
+        .editar-icono {
+            font-size: 18px;
+            position:absolute;
+            right:30px;
+            top:30px;
+            
+        }
+    }
+
+    .botones-perfil {
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+        gap: 15px;
+
+        .boton-perfil {
+            border: 0px color black;
+            border-radius: 0px;
+            color: black;
+            --background: transparent;
+            text-transform: none;
+            font-weight: normal;
+            font-size: 14px;
+        }
+    }
+
+    .log-out {
+        margin-top: 80px;
+        width: 150px;
+        height: 80px;
+        justify-self: center;
+
+        .boton-logout {
+            background-color: "primary-shade";
+            color: "primary";
+            border-radius: 25px;
+            font-weight: bold;
+            text-transform: none;
+        }
+    }
+}
