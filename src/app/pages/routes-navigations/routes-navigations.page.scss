@@ -1,0 +1,116 @@
+ion-content {
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --padding-top: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  
+    .input-style {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 10px;
+    }
+  }
+  
+  .transport-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  
+    ion-icon {
+      background: #ede8f9;
+      border-radius: 50%;
+      padding: 12px;
+      font-size: 24px;
+    }
+  }
+  
+  .map-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  
+    .info-boxes {
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+  
+      .info-box {
+        background: white;
+        border: 1px solid #ccc;
+        padding: 6px 10px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  
+    .ir-ruta-boton {
+      background: #6c5ce7;
+      color: white;
+      border-radius: 10px;
+      padding: 0 20px;
+    }
+  }
+  
+  /* 📱 Estilos para pantallas grandes (PC o tablet horizontal) */
+  @media screen and (min-width: 768px) {
+    .input-container {
+      flex-direction: row;
+      justify-content: space-between;
+  
+      ion-input {
+        flex: 1;
+        margin-right: 10px;
+      }
+    }
+  
+    .map-container {
+      justify-content: center;
+  
+      .info-boxes {
+        flex-direction: column;
+        top: 10px;
+        bottom: auto;
+        right: 5%;
+        left: auto;
+        align-items: flex-start;
+  
+        .info-box {
+          margin-bottom: 1%;
+          height: 195px;
+        }
+      }
+    }
+  
+    .button-container {
+      justify-content: center;
+  
+      .ir-ruta-boton ::part(native){
+        width: 200px;
+      }
+    }
+  }
+  
