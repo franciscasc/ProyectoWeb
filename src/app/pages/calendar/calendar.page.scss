@@ -1,4 +1,4 @@
-//version patata
+//version pc
 .nose {
     display: flex;
     flex-direction: row;  /* Cambiar la dirección a columna para que los elementos estén apilados */
@@ -37,3 +37,19 @@
     box-shadow: none;
 }
 
+//version movil
+@media screen and (max-width: 768px) {
+    .nose {
+        display: flex;
+        flex-direction: column;  /* Cambiar la dirección a columna para que los elementos estén apilados */
+        justify-content: center;  /* Centrar los elementos en el eje Y */
+        align-items: center;  /* Centrar los elementos en el eje X */
+        
+    }
+    .calendario{
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
