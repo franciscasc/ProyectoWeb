@@ -33,9 +33,14 @@
    
 }
 
-.listaEventos ion-card {
+.listaEventos .evento {
+    width: 100%; /* que ocupe todo el ancho disponible dentro del contenedor */
+    max-width: 400px; /* o cualquier ancho deseado para los cards */
+  }
+  
+/*.listaEventos ion-card {
     box-shadow: none;
-}
+}*/
 
 //version movil
 @media screen and (max-width: 768px) {

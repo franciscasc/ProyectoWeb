@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InfiniteScrollCustomEvent } from '@ionic/angular';
 
 @Component({
   selector: 'app-notifications',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   standalone:false,
 })
 export class NotificationsPage implements OnInit {
-
+  
   constructor() { }
+  
 
   ngOnInit() {
   }
+
+ 
+
 
 }
