@@ -24,11 +24,8 @@ export class HeaderComponent  implements OnInit {
     this.screenWidth = event.target.innerWidth;
   }
 
-  /*goToHome() {
+  goToHome() {
     this.router.navigate(['/home']);
-  }*/
-  goTouser() {
-    this.router.navigate(['/pre-start']);
   }
 
   goToNotifications() {
