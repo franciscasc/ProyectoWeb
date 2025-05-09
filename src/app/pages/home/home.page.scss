@@ -1,4 +1,4 @@
-//diseño móvil perfil usuario 
+//Diseño móvil (perfil usuario)
 .perfil-usuario {
     display: flex;
     justify-content: center;
@@ -76,7 +76,7 @@
     }
 }
 
-//diseño web perfil usuario 
+//Diseño web (perfil usuario)
 @media screen and (min-width: 768px) {
     .perfil-usuario {
         justify-content: center;
