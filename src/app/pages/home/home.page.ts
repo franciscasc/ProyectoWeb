@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   standalone:false,
 })
 export class HomePage implements OnInit {
+  screenWidth: number = window.innerWidth;
 
-  constructor() { }
+  @HostListener('window:resize', ['$event'])
+  
+  onResize(event: any) {
+    this.screenWidth = event.target.innerWidth;
+  }
+  constructor(private router:Router) { }
 
   ngOnInit() {
+    this.screenWidth = window.innerWidth;
+  
   }
+
+  goToLogIn(){
+    this.router.navigate(['/log-in']);
+  }
+
 
 }

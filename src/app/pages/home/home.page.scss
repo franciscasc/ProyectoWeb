@@ -1,0 +1,171 @@
+//diseño móvil perfil usuario 
+.perfil-usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position:relative;
+    
+    ion-card {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .perfil-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: auto;
+        
+        ion-avatar {
+            --background-color: var(--ion-color-primary-contrast);
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 16px;
+            color: var(--ion-color-secondary-contrast);
+        }
+
+        .usuario {
+            color: var(--ion-color-medium-tint);
+            font-size: 12px;
+        }
+
+        .editar-icono {
+            font-size: 18px;
+            position:absolute;
+            right:30px;
+            top:30px;
+            cursor: pointer;
+        }
+    }
+
+    .botones-perfil {
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+        gap: 10px;
+
+        .boton-perfil {
+            --border-radius: 10px;
+            --border-color: var(--ion-color-secondary-contrast);
+            --border-width: 1px;
+            --color: var(--ion-color-secondary-contrast);
+            --background: var(--ion-color-primary-contrast);
+            text-transform: none;
+            font-size: 13px;
+            padding: 0 20px;
+        }
+    }
+
+    .log-out {
+        margin-top: 50px;
+        display:flex;
+        justify-content: center;
+
+        .boton-logout {
+            --background-color: var(--ion-color-primary-shade);
+            color: var(--ion-color-primary);
+            border-radius: 25px;
+            font-weight: bold;
+            text-transform: none;
+        }
+    }
+}
+
+//diseño web perfil usuario 
+@media screen and (min-width: 768px) {
+    .perfil-usuario {
+        justify-content: center;
+
+        ion-card {
+            max-width: 800px;
+        }
+
+        ion-card-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .perfil-header {
+            grid-column:1;
+            grid-row: 1;
+            flex-direction: row;
+            display:flex;
+            width: 100%;
+            min-width: 150px;
+            justify-content: center;
+            margin-top:30px;
+
+            ion-avatar {
+                --background-color: var(--ion-color-primary-contrast);
+                border-radius: 50%;
+                padding: 10px;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 16px;
+                color: var(--ion-color-secondary-contrast);
+            }
+
+            .usuario {
+                color: var(--ion-color-medium-tint);
+                font-size: 14px;
+                margin: 0;
+            }
+            .editar-icono{
+                display:none;
+            }
+        }
+
+        .botones-perfil {
+            grid-column:2;
+            grid-row: 1/ span 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 12px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            min-width: 220px;
+
+            .boton-perfil {
+                --border-radius: 10px;
+                --border-color: var(--ion-color-secondary-contrast);
+                --border-width: 1px;
+                --color: var(--ion-color-secondary-contrast);
+                --background: var(--ion-color-primary-contrast);
+                text-transform: none;
+                font-size: 13px;
+                padding: 0 20px;
+            }
+        }
+
+        .log-out {
+            grid-column: 1;
+            grid-row:2;
+            display: flex;
+            margin-top: 20px;
+            width:100%;
+            justify-content:center;
+            align-items: center;
+
+            .boton-logout {
+                --background: #69539d;
+                --color: var(--ion-color-primary-contrast);
+                --border-radius: 20px;
+                text-transform: none;
+                font-size: 13px;
+                padding: 0 20px;   
+            }
+        }
+    }
+}
+

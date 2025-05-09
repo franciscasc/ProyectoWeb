@@ -32,6 +32,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/routes-navigations/routes-navigations.module').then( m => m.RoutesNavigationsPageModule)
   },
 
+
 ];
 
 @NgModule({
