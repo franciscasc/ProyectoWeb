@@ -1,0 +1,30 @@
+.desktop-view {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.mobile-view {
+  display: block;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+ion-avatar {
+  background: #f2e8fc;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more {
+  text-align: center;
+  font-weight: bold;
+}

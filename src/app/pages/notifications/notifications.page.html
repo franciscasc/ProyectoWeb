@@ -3,8 +3,43 @@
 </ion-header>
 
 
-<ion-content >
-  
+<ion-content class="ion-padding">
+  <!--vista de pc-->
+  <div class="desktop-view">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4" *ngFor="let group of PlaceholderNotifications">
+          <h5>{{ group.date }} ({{ group.notifications.length }})</h5>
+          <ion-card *ngFor="let notif of group.notifications.slice(0, 6)">
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <ion-icon [name]="notif.icon"></ion-icon>
+              </ion-avatar>
+              <ion-label>{{ notif.title }}</ion-label>
+            </ion-item>
+          </ion-card>
+          <p class="more">...</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+  <!--vista de movil-->
+   <div class="mobile-view">
+    <ion-list *ngFor="let group of PlaceholderNotifications">
+      <ion-item-divider sticky>
+        <ion-label>{{ group.date }} ({{ group.notifications.length }})</ion-label>
+      </ion-item-divider>
+      <ion-item *ngFor="let notif of group.notifications.slice(0, 5)">
+        <ion-avatar slot="start">
+          <ion-icon [name]="notif.icon"></ion-icon>
+        </ion-avatar>
+        <ion-label>{{ notif.title }}</ion-label>
+      </ion-item>
+      <p class="more">...</p>
+    </ion-list>
+  </div>
 </ion-content>
 
 
