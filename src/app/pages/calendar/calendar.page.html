@@ -4,7 +4,28 @@
 
 
 <ion-content >
- <p>am i a real boi papa</p>
+  <div class="nose">
+    <div class="calendario" ><ion-datetime  color="primary"></ion-datetime></div>
+    
+    <div class="listaEventos">
+      <ion-title size="large" > Proximos Eventos:</ion-title>
+      <div *ngFor="let evento of eventos" class="evento">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="calendar-sharp"></ion-icon>
+              {{ evento.title }}
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            inicio: {{ evento.start }}
+            <br>
+            fin: {{ evento.end }}
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
 </ion-content>
 
 

@@ -1,0 +1,60 @@
+//version pc
+.nose {
+    display: flex;
+    flex-direction: row;  /* Cambiar la dirección a columna para que los elementos estén apilados */
+    justify-content: space-evenly;  /* Centrar los elementos en el eje Y */
+    align-items: center;  /* Centrar los elementos en el eje X */
+    height: 100vh;  /* Asegurarse de que ocupe toda la altura disponible */
+    padding: 10px;
+}
+.calendario{
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendario ion-datetime {
+    
+    --background:var(--ion-color-secondary);
+    --background-rgb: var(--ion-color-secondary-shade);
+
+    border-radius: 16px;
+    box-shadow: rgba(var(--ion-color-rose-rgb), 0.3) 0px 10px 15px -3px;
+
+}
+
+
+
+.listaEventos {
+    display: flex;
+    flex-direction: column; /* Esto hace que los cards se apilen verticalmente */
+    justify-content: center;
+    align-items: center; /* Centra los cards horizontalmente */
+   
+}
+
+.listaEventos .evento {
+    width: 100%; /* que ocupe todo el ancho disponible dentro del contenedor */
+    max-width: 400px; /* o cualquier ancho deseado para los cards */
+  }
+  
+/*.listaEventos ion-card {
+    box-shadow: none;
+}*/
+
+//version movil
+@media screen and (max-width: 768px) {
+    .nose {
+        display: flex;
+        flex-direction: column;  /* Cambiar la dirección a columna para que los elementos estén apilados */
+        justify-content: center;  /* Centrar los elementos en el eje Y */
+        align-items: center;  /* Centrar los elementos en el eje X */
+        
+    }
+    .calendario{
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

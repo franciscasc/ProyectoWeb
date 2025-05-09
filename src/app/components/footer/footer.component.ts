@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   standalone:false,
 })
 export class FooterComponent  implements OnInit {
-
   screenWidth: number = window.innerWidth;
   constructor(private router:Router) { }
 
@@ -31,8 +30,9 @@ export class FooterComponent  implements OnInit {
     this.router.navigate(['/routes-navigations']);
   }
 
-  goToProfile(){
-    this.router.navigate(['/profile']);
+  goToHome() {
+    this.router.navigate(['/home']);
   }
+ 
 
 }
