@@ -2,12 +2,54 @@
   <app-header [title]="'Inicio'"></app-header>
 </ion-header>
 
+<!--diseño móvil-->
+<ion-content>
+  <div class ="perfil-usuario">
+    <ion-card>
+      <ion-card-content>
 
-<ion-content >
- <p>am i a real boi papa</p>
+          <div class ="perfil-header">
+            <ion-avatar>
+              <img alt ="Avatar" src ="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <div>
+              <h2>Nombre</h2>
+              <p class ="usuario">usuario</p>
+            </div>
+            <ion-icon name="create-outline" class = "editar-icono"></ion-icon>
+          </div>
+
+        <div class="botones-perfil">
+          <ion-button fill ="outline" expand ="block" class ="boton-perfil">
+            <ion-icon slot ="start" name ="time-outline"></ion-icon>
+            Historial de Notificaciones
+          </ion-button>
+          <ion-button fill ="outline" expand ="block" class ="boton-perfil">
+            <ion-icon slot ="start" name ="settings-outline"></ion-icon>
+            Configuración
+          </ion-button>
+          <ion-button fill ="outline" expand ="block" class ="boton-perfil">
+            <ion-icon slot ="start" name ="today-outline"></ion-icon>
+            Mis eventos
+          </ion-button>
+          <ion-button fill ="outline" expand ="block" class ="boton-perfil">
+            <ion-icon slot ="start" name ="help-circle-outline"></ion-icon>
+            Ayuda
+          </ion-button>
+        </div>
+
+        <div class = "log-out">
+          <ion-button expand ="block" color ="primary" (click)="goToLogIn()">Log Out</ion-button>
+        </div>
+          
+
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
 
 
 <!--Aca Vamos a trabajar en la primera pagina que se ve de web y movil-->
 <app-footer></app-footer>
 
+<!--<app-footer></app-footer>-->
