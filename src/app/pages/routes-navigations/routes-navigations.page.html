@@ -1,12 +1,37 @@
 <ion-header>
   <app-header [title]="'Rutas'"></app-header>
 </ion-header>
+<!--version pc(Copiar y pegar pero modificar los valores del css moficar la clase login cointaeiner a version PC)-->
 
 
-<ion-content >
- <p>am i a real boi papa</p>
+<ion-content>
+  <!-- Búsqueda -->
+  <div class="input-container">
+    <ion-input placeholder="Ubicación de inicio" class="input-style"></ion-input>
+    <ion-input placeholder="Ubicación de destino" class="input-style"></ion-input>
+  </div>
+
+  <!-- Iconos de transporte -->
+  <div class="transport-icons">
+    <ion-icon name="bicycle-outline"></ion-icon>
+    <ion-icon name="walk-outline"></ion-icon>
+    <ion-icon name="scooter-outline"></ion-icon>
+  </div>
+
+  <!-- Imagen del mapa -->
+  <div class="map-container">
+    <img src="/assets/Imagen Mapa web.png" alt="Ruta A-B" />
+    <div class="info-boxes">
+      <div class="info-box"><ion-icon name="flame-outline"></ion-icon> 315 kcal</div>
+      <div class="info-box"><ion-icon name="navigate-outline"></ion-icon> 8 km</div>
+      <div class="info-box"><ion-icon name="time-outline"></ion-icon> 15 min</div>
+    </div>
+  </div>
+
+  <!-- Botón -->
+  <div class="button-container">
+    <ion-button  class="ir-ruta-boton">Ir a la ruta</ion-button>
+  </div>
 </ion-content>
-
-
 
 <app-footer></app-footer>
