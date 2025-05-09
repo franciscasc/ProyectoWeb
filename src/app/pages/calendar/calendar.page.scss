@@ -26,6 +26,9 @@
 
 
 .listaEventos {
+    width: 50%; /* ajusta según lo que necesites */
+    max-width: 800px;
+    min-width: 300px;
     display: flex;
     flex-direction: column; /* Esto hace que los cards se apilen verticalmente */
     justify-content: center;
@@ -36,6 +39,11 @@
 .listaEventos .evento {
     width: 100%; /* que ocupe todo el ancho disponible dentro del contenedor */
     max-width: 400px; /* o cualquier ancho deseado para los cards */
+    width: 100%;
+    min-height: 150px; /* suficiente para uniformidad sin mucho vacío */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
 /*.listaEventos ion-card {
