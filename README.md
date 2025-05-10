@@ -22,3 +22,6 @@ estudiante podra ver su recorrido y su apoderado, que puede administrar el movim
 Antes de crear un modelo, primero hablamos con un representante de la seremi para poder escuchar el problema y luego obtener los requerimientos, tales requerimientos se encuentran en la carpeta otros, dentro del repositorio y esta en formato exel.
 
 Luego de los requerimientos realizamos un diseño en [figma](https://www.figma.com/design/2mkzKcVYE9YI2iSASCwu6Q/ProyectoWeb?node-id=0-1&t=9CiwlXQJYXb7U3AT-1) , que nos sera de utilidad para tener una noción de lo que haremos en ionic-angular
+
+## Implementaci´on de estructura de navegacion.
+![Imagen de WhatsApp 2025-05-09 a las 21 19 15_5fc676d0](https://github.com/user-attachments/assets/d6e3fb4f-6f16-4d9e-a6bd-afd17f9c6c1f)
