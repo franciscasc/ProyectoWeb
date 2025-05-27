@@ -12,41 +12,90 @@
         <ion-card-title class="ion-text-center">Registro</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <form>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+          <!--Nombre y apellido-->
           <ion-item>
             <ion-label position="floating">Nombre y Apellido</ion-label>
-            <ion-input name="name" type="text" required></ion-input>
+            <ion-input formControlName = "nombre_apellido"></ion-input>
           </ion-item>
+          <ion-note *ngIf="registerForm.get('nombre_apellido')?.hasError('required') && registerForm.get('nombre_apellido')?.touched" color="danger">
+            El nombre de usuario es obligatorio.
+          </ion-note>
+
+          <!--Rut-->
           <ion-item>
             <ion-label position="floating">Rut</ion-label>
-            <ion-input name="Identification" type="text" required></ion-input>
+            <ion-input formControlName="rut"></ion-input>
           </ion-item>
+          <ion-note *ngIf="registerForm.get('rut')?.hasError('required') && registerForm.get('rut')?.touched" color="danger">
+            El RUT es obligatorio.
+          </ion-note>
+
+          <!--Correo electronico-->
           <ion-item>
             <ion-label position="floating">Correo </ion-label>
-            <ion-input name="email" type="email" required></ion-input>
+            <ion-input formControlName="correo" type="email"></ion-input>
           </ion-item>
+          <ion-note *ngIf="registerForm.get('correo')?.hasError('required') && registerForm.get('correo')?.touched" color="danger">
+            El correo es obligatorio. 
+          </ion-note>
+          <ion-note *ngIf="registerForm.get('correo')?.hasError('email') && registerForm.get('correo')?.touched" color="danger">
+            El formato del correo es inválido.
+          </ion-note>
+
+          <!--Ubicacion-->
           <ion-item>
             <ion-label position="floating"> Ubicacion</ion-label>
-            <ion-input name="location" type="text" required></ion-input>
+            <ion-input formControlName="ubicacion" ></ion-input>
           </ion-item>
+          <ion-note *ngIf="registerForm.get('ubicacion')?.hasError('required') && registerForm.get('ubicacion')?.touched" color="danger">
+            Debe ingresar una ubicacion.
+          </ion-note>
+
+          <!--Establecimiento-->
           <ion-item>
             <ion-label position="floating">Establecimiento</ion-label>
-            <ion-input name="stablishment" type="text" required></ion-input>
+            <ion-input formControlName="establecimiento" ></ion-input>
           </ion-item>
+          <ion-note *ngIf="registerForm.get('establecimiento')?.hasError('required') && registerForm.get('establecimiento')?.touched" color="danger">
+            Debe ingresar un Establecimiento
+          </ion-note>
+
+          <!--Contrasena-->
           <ion-item>
             <ion-label position="floating">Contraseña</ion-label>
-            <ion-input name="password" type="password" required></ion-input>
+            <ion-input formControlName="contraseña" type="password"></ion-input>
           </ion-item>
+          <ion-note *ngIf="registerForm.get('contraseña')?.hasError('required') && registerForm.get('contraseña')?.touched" color="danger">
+            La contraseña es obligatoria.
+          </ion-note>
+          <ion-note *ngIf="registerForm.get('contraseña')?.hasError('minlength') && registerForm.get('contraseña')?.touched" color="danger">
+            La contraseña debe tener al menos 6 caracteres.
+          </ion-note>
+
+          <!--Confirmar contrasena-->
           <ion-item>
             <ion-label position="floating">Confirmar contraseña</ion-label>
-            <ion-input name="password" type="password" required></ion-input>
+            <ion-input formControlName="confirmarContraseña"  type="password"></ion-input>
           </ion-item>
+          <ion-note *ngIf="registerForm.get('confirmarContraseña')?.hasError('required') && registerForm.get('confirmarContraseña')?.touched" color="danger">
+            Debe confirmar la contraseña.
+          </ion-note>
+          <ion-note *ngIf="registerForm.errors?.['mismatch'] && registerForm.get('confirmarContraseña')?.touched" color="danger">
+            Las contraseñas no coinciden.
+          </ion-note>
+
+          <!--Checkbox de terminos y condiciones-->
           <ion-item>
-            <ion-checkbox labelPlacement="end">Aceptar los terminos y condiciones</ion-checkbox>
+            <ion-checkbox labelPlacement="end" formControlName="terminos">Aceptar los terminos y condiciones</ion-checkbox>
           </ion-item>
+          <ion-note *ngIf="registerForm.get('terminos')?.invalid && registerForm.get('terminos')?.touched" color="danger">
+            Debe aceptar los términos y condiciones.
+          </ion-note>
 
           <div class="ion-margin-top">
-            <ion-button expand="block" type="submit" (click) = "goToRutas()">Crear cuenta</ion-button>
+            <ion-button expand="block" type="submit"  [disabled]="registerForm.invalid">Crear cuenta</ion-button>
           </div>
         </form>
       </ion-card-content>
