@@ -2,57 +2,61 @@
   <app-header [title]="'Sign Up'"></app-header>
 </ion-header>
 
-<ion-content >
+<ion-content>
   <ion-button class="back-button" color="primary" (click)="goBack()">
     <ion-icon name="arrow-back-outline"></ion-icon>
   </ion-button>
+
   <div class="signup-container">
     <ion-card>
       <ion-card-header>
         <ion-card-title class="ion-text-center">Registro</ion-card-title>
       </ion-card-header>
+
       <ion-card-content>
-        <form>
+        <form (ngSubmit)="registrar()">
           <ion-item>
             <ion-label position="floating">Nombre y Apellido</ion-label>
-            <ion-input name="name" type="text" required></ion-input>
+            <ion-input [(ngModel)]="usuario.nombre_apellido" name="nombre_apellido" required></ion-input>
           </ion-item>
+
           <ion-item>
-            <ion-label position="floating">Rut</ion-label>
-            <ion-input name="Identification" type="text" required></ion-input>
+            <ion-label position="floating">RUT</ion-label>
+            <ion-input [(ngModel)]="usuario.rut" name="rut" required></ion-input>
           </ion-item>
+
           <ion-item>
-            <ion-label position="floating">Correo </ion-label>
-            <ion-input name="email" type="email" required></ion-input>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input [(ngModel)]="usuario.correo" name="correo" type="email" required></ion-input>
           </ion-item>
+
           <ion-item>
-            <ion-label position="floating"> Ubicacion</ion-label>
-            <ion-input name="location" type="text" required></ion-input>
+            <ion-label position="floating">Ubicación</ion-label>
+            <ion-input [(ngModel)]="usuario.ubicacion" name="ubicacion" required></ion-input>
           </ion-item>
+
           <ion-item>
             <ion-label position="floating">Establecimiento</ion-label>
-            <ion-input name="stablishment" type="text" required></ion-input>
+            <ion-input [(ngModel)]="usuario.establecimiento" name="establecimiento" required></ion-input>
           </ion-item>
+
           <ion-item>
             <ion-label position="floating">Contraseña</ion-label>
-            <ion-input name="password" type="password" required></ion-input>
+            <ion-input [(ngModel)]="usuario.contrasena" name="contraseña" type="password" required></ion-input>
           </ion-item>
+
           <ion-item>
-            <ion-label position="floating">Confirmar contraseña</ion-label>
-            <ion-input name="password" type="password" required></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-checkbox labelPlacement="end">Aceptar los terminos y condiciones</ion-checkbox>
+            <ion-checkbox [(ngModel)]="usuario.acepta_terminos" name="acepta_terminos"></ion-checkbox>
+            <ion-label>Aceptar los términos y condiciones</ion-label>
           </ion-item>
 
           <div class="ion-margin-top">
-            <ion-button expand="block" type="submit" (click) = "goToRutas()">Crear cuenta</ion-button>
+            <ion-button expand="block" type="submit">Crear cuenta</ion-button>
           </div>
         </form>
       </ion-card-content>
     </ion-card>
   </div>
 </ion-content>
-
 
 <app-footer></app-footer>

@@ -8,5 +8,11 @@ import { Register } from '../models/register';
 })
 export class RegisterService {
 
-  constructor() { }
+  private apiUrl = 'http://localhost:3000/api/users/register'
+
+  constructor(private http:HttpClient) { }
+
+  registrarUsuario(usuario: Register): Observable<any> {
+    return this.http.post<any>(this.apiUrl, usuario);
+  }
 }

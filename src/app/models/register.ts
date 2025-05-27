@@ -4,5 +4,6 @@ export interface Register {
     correo: string;
     ubicacion: string;
     establecimiento: string;
-    contraseña: string;
+    contrasena: string;
+    acepta_terminos: boolean;
 }
