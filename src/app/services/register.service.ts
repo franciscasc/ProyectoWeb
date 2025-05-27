@@ -7,13 +7,13 @@ import { Register } from '../models/register';
   providedIn: 'root'
 })
 export class RegisterService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:3000/api/users/register';
   constructor(private http:HttpClient) { 
     console.log('RegisterService creado');
   }
 
   registerUser(user: Register): Observable<any> {
-    return this.http.post<Register>(`${this.apiUrl}/register`, user);
+    return this.http.post<Register>(this.apiUrl, user);
   }
 
 }
