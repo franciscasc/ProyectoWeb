@@ -33,7 +33,17 @@ export class SignUpPage  {
 
   onSubmit() {
     if (this.registerForm.valid) {
-      const datos: Register = this.registerForm.value;
+      const datos: Register = { 
+        nombre_apellido: this.registerForm.value.nombre_apellido,
+        rut: this.registerForm.value.rut,
+        correo: this.registerForm.value.correo,
+        ubicacion: this.registerForm.value.ubicacion,
+        establecimiento: this.registerForm.value.establecimiento,
+        contraseña: this.registerForm.value.contraseña,
+        acepta_terminos: this.registerForm.value.terminos // Convertir a 1 o 0
+
+      };
+      // Eliminar el campo de términos antes de enviar
       this.serviceRegister.registerUser(datos).subscribe({
         next: (res) => {
           console.log('Registro exitoso', res);
@@ -43,7 +53,7 @@ export class SignUpPage  {
           console.error('Error al registrar usuario', err.error?.message || err.message);
         }
       });
-      console.log('Formulario enviado',this.registerForm.value);
+      console.log('Datos del formulario:', datos);
 
     }else{
       this.registerForm.markAllAsTouched(); // Marca todos los campos como tocados para mostrar errores
@@ -51,9 +61,6 @@ export class SignUpPage  {
     
     
   }
-
-
-  
   goBack() {
     this.router.navigate(['/log-in']);
   }

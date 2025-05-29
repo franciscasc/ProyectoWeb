@@ -5,6 +5,5 @@ export interface Register {
     ubicacion: string;
     establecimiento: string;
     contraseña: string;
-    confirmarContraseña: string; 
-    terminos: boolean;
+    acepta_terminos: boolean;
 }
