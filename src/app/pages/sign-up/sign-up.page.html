@@ -44,19 +44,32 @@
             El formato del correo es inválido.
           </ion-note>
 
-          <!--Ubicacion-->
+          <!--Ubicacion
           <ion-item>
             <ion-label position="floating"> Ubicacion</ion-label>
             <ion-input formControlName="ubicacion" ></ion-input>
+          </ion-item>
+          -->
+          <ion-item>
+            <ion-label position="stacked">Ubicacion</ion-label>
+            <ion-select formControlName="ubicacion" interface="popover" placeholder="Selecciona una ubicación">
+              <ion-select-option value="Viña del Mar">Viña del Mar</ion-select-option>
+            </ion-select>
           </ion-item>
           <ion-note *ngIf="registerForm.get('ubicacion')?.hasError('required') && registerForm.get('ubicacion')?.touched" color="danger">
             Debe ingresar una ubicacion.
           </ion-note>
 
-          <!--Establecimiento-->
+          <!--Establecimiento
           <ion-item>
             <ion-label position="floating">Establecimiento</ion-label>
             <ion-input formControlName="establecimiento" ></ion-input>
+          </ion-item>-->
+          <ion-item>
+            <ion-label position="stacked">Establecimiento</ion-label>
+            <ion-select formControlName="establecimiento" interface="popover" placeholder="Selecciona un establecimiento">
+              <ion-select-option value="SSCC Monjas Francesas">SSCC Monjas Francesas</ion-select-option>
+            </ion-select>
           </ion-item>
           <ion-note *ngIf="registerForm.get('establecimiento')?.hasError('required') && registerForm.get('establecimiento')?.touched" color="danger">
             Debe ingresar un Establecimiento
