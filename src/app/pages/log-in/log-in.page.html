@@ -22,23 +22,43 @@
           <ion-card-title class="ion-text-center">Iniciar sesion</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <form>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <!--Correo-->
             <ion-item>
               <ion-label position="floating">Correo electronico</ion-label>
-              <ion-input color="primary"name="email" type="email" required></ion-input>
+              <ion-input color="primary" formControlName="correo"></ion-input>
             </ion-item>
+            <ion-note *ngIf="loginForm.get('correo')?.hasError('required') && loginForm.get('correo')?.touched" color="danger">
+              El correo es obligatorio. 
+            </ion-note>
+            <ion-note *ngIf="loginForm.get('correo')?.hasError('email') && loginForm.get('correo')?.touched" color="danger">
+              El formato del correo es inválido.
+            </ion-note>
+            <!--Contraseña-->
             <ion-item>
               <ion-label position="floating">Contraseña</ion-label>
-              <ion-input name="password" type="password" required></ion-input>
+              <ion-input  type="password" formControlName="contraseña"></ion-input>
             </ion-item>
+            <ion-note *ngIf="loginForm.get('contraseña')?.hasError('required') && loginForm.get('contraseña')?.touched" color="danger">
+              La contraseña es obligatoria.
+            </ion-note>
+            
+
+            <!--Checkbox de terminos y condiciones-->
             <ion-item>
-              <ion-checkbox labelPlacement="end">Aceptar los terminos y condiciones</ion-checkbox>
+              <ion-checkbox labelPlacement="end" formControlName="terminos">Aceptar los terminos y condiciones</ion-checkbox>
             </ion-item>
+            <ion-note *ngIf="loginForm.get('terminos')?.invalid && loginForm.get('terminos')?.touched" color="danger">
+            Debe aceptar los términos y condiciones.
+            </ion-note>
 
             <div class="ion-margin-top ion-text-center">
-              <ion-button  type="submit" shape="round" (click)="goToRutas()">iniciar sesion</ion-button>
+              <ion-button  type="submit" shape="round" [disabled]="loginForm.invalid">iniciar sesion</ion-button>
             </div>
           </form>
+
+         
+
           <div class = "ion-text-center">
             <ion-text color = "primary"> 
               ¿No tienes cuenta?
