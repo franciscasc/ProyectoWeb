@@ -47,7 +47,7 @@ export class SignUpPage  {
       this.serviceRegister.registerUser(datos).subscribe({
         next: (res) => {
           console.log('Registro exitoso', res);
-          this.router.navigate(['/log-in']);
+          this.router.navigate(['/routes-navigations']);
         },
         error: (err) => {
           console.error('Error al registrar usuario', err.error?.message || err.message);
