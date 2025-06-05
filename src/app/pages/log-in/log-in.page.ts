@@ -31,8 +31,8 @@ export class LogInPage implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       const datos: Login = {
-        email: this.loginForm.value.correo,
-        password: this.loginForm.value.contraseña
+        correo: this.loginForm.value.correo,
+        contraseña: this.loginForm.value.contraseña
       }
       this.authService.login(datos).subscribe({
         next:(res) => {

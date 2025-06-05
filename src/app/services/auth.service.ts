@@ -12,7 +12,7 @@ export class AuthService {
   constructor(private http:HttpClient) { }
 
   login(user: Login): Observable<any> {
-    return this.http.post(`${this.apiUrl}/lolxd`,user);
+    return this.http.post<any>(`${this.apiUrl}/api/users/login`, user);
   }
 
   guardarToken(token: string){
