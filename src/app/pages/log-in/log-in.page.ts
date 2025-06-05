@@ -41,7 +41,7 @@ export class LogInPage implements OnInit {
           this.router.navigate(['/routes-navigations']);
         },
         error: (err) => {
-          this.mensaje = err.error.error;
+          this.mensaje = err.error.message || 'Error al iniciar sesión';
           console.error('Error al iniciar sesión', this.mensaje);
         }
       })
