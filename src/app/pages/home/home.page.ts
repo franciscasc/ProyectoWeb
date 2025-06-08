@@ -23,7 +23,7 @@ export class HomePage implements OnInit {
     
   }
 
-  /*goToLogIn(){
+  /*goToLogIn(){gdfsgdfsgddfdgf
     this.router.navigate(['/log-in']);
   }*/
 
