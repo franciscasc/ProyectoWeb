@@ -20,10 +20,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;
-    if (this.authService.isAuthenticated()) {
-      this.router.navigate(['/log-in']);
-    }
-  
+    
   }
 
   /*goToLogIn(){
